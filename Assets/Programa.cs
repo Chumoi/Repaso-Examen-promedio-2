@@ -11,8 +11,6 @@ public class Programa : MonoBehaviour
     public GameObject personaje1, personaje2, personaje3, personaje4;
     GameObject imagenBorrar;
 
-    public Text info;
-
     List<PersonajesController> personaje = new List<PersonajesController>();
 
     // Use this for initialization
@@ -29,7 +27,7 @@ public class Programa : MonoBehaviour
         imagenBorrar = GameObject.FindGameObjectWithTag("PersonajeActual");
     }
 
-    public void Button_Click(GameObject objeto)
+    public void Boton_Click(GameObject objeto)
     {
         Instantiate(objeto, target);
     }
@@ -45,9 +43,20 @@ public class Programa : MonoBehaviour
         }
     }
 
-    public void Button_Info()
+    public void Button_Info1()
     {
-
+        Debug.Log("El primer personaje es " + personaje[0].nombreCompleto + " , tiene " + personaje[0].edad + " años, " + personaje[0].físico);
     }
-
+    public void Button_Info2()
+    {
+        Debug.Log("El segundo personaje es " + personaje[1].nombreCompleto + " , tiene " + personaje[1].edad + " años, " + personaje[1].físico);
+    }
+    public void Button_Info3()
+    {
+        Debug.Log("El tercer personaje es " + personaje[2].nombreCompleto + " , tiene " + personaje[2].edad + " años, " + personaje[2].físico);
+    }
+    public void Button_Info4()
+    {
+        Debug.Log("El CUARTO personaje es " + personaje[3].nombreCompleto + " , tiene " + personaje[3].edad + " años, " + personaje[3].físico);
+    }
 }
